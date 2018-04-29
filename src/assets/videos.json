@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Video",
+    "link": "http://localhost:8013/video.mp4"
+  },
+  {
+    "name": "Video 1",
+    "link": "http://localhost:8013/video1.mp4"
+  },
+  {
+    "name": "Video 2",
+    "link": "http://localhost:8013/video2.mp4"
+  },
+  {
+    "name": "Video 3",
+    "link": "http://localhost:8013/video3.mp4"
+  }
+]

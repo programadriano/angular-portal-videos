@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fadeInAnimation } from '../../animations/fadein';
+import { MoviesService } from './../../services/movies.service';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +12,12 @@ import { fadeInAnimation } from '../../animations/fadein';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private movies: MoviesService) { }
 
   ngOnInit() {
+      this.movies.getJSON().subscribe(data => {
+        console.log(data);
+    });
   }
 
 }
