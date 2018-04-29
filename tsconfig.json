@@ -1,5 +1,10 @@
 {
   "compileOnSave": false,
+  "baseUrl": "./src",
+  "paths": {
+    "@datorama/services/*": ["app/services/*"],
+    "@datorama/pipes/*": ["app/pipes/*"]
+  },
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -8,12 +13,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"]
   }
 }
