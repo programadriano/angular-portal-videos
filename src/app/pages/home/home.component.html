@@ -11,20 +11,22 @@
         <div class="clear"> </div>
       </div>
 
-      <div class="content-grid">
-        <a href="#">
-          <img src="images/gridallbum9.png" title="allbum-name" />
-        </a>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-        <a class="button" href="#">Download</a>
+      <div class="content-grid" *ngFor="let movie of movies">
+        <video width="300">
+          <source src="{{movie.link}}" type="video/mp4">
+        </video>
+        <h3>{{movie.name}}</h3>
+        <a class="button" href="{{movie.link}}" download target="_blank">Download</a>
       </div>
-      <div class="content-grid">
+
+      <!-- <div class="content-grid">
         <a href="#">
           <img src="images/gridallbum10.png" title="allbum-name" />
         </a>
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
         <a class="button" href="#">Download</a>
       </div>
+
       <div class="content-grid">
         <a href="#">
           <img src="images/gridallbum11.png" title="allbum-name" />
@@ -40,5 +42,6 @@
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 
         <a class="button" href="#">Download</a>
-      </div>
+      </div> -->
+
       <div class="clear"> </div>

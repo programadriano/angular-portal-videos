@@ -5,18 +5,21 @@ import { MoviesService } from './../../services/movies.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-   animations: [fadeInAnimation],
+  animations: [fadeInAnimation],
   styleUrls: ['./home.component.css'],
   // tslint:disable-next-line:use-host-property-decorator
   host: { '[@fadeInAnimation]': '' }
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private movies: MoviesService) { }
+  constructor(private moviesService: MoviesService) { }
+
+  movies: any;
 
   ngOnInit() {
-      this.movies.getJSON().subscribe(data => {
-        console.log(data);
+    this.moviesService.getJSON().subscribe(data => {
+      this.movies = data;
+      console.log(this.movies);
     });
   }
 
